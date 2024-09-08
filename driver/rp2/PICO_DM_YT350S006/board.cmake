@@ -27,8 +27,6 @@ list(APPEND MICROPY_SOURCE_EXTMOD
 
 target_compile_definitions(${MICROPY_TARGET} PRIVATE
 # When using MACRAW mode (with lwIP), maximum buffer space must be used for the raw socket
-    LCD_X_RES=${LCD_X_RES}
-    LCD_Y_RES=${LCD_Y_RES}
     TFT_SCL_PIN=${TFT_SCL_PIN}
     TFT_SDA_PIN=${TFT_SDA_PIN}
     TFT_RES_PIN=${TFT_RES_PIN}
