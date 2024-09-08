@@ -17,6 +17,10 @@ set(PIO_USE_DMA 1)
 set(DISP_OVER_PIO 1)
 set(I80_BUS_CLK_KHZ 50000)
 
+list(APPEND MICROPY_SOURCE_EXTMOD
+    ${CMAKE_CURRENT_LIST_DIR}/../pio/pio_i80.c
+)
+
 target_compile_definitions(${MICROPY_TARGET} PRIVATE
 # When using MACRAW mode (with lwIP), maximum buffer space must be used for the raw socket
     LCD_X_RES=${LCD_X_RES}
